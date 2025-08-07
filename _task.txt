@@ -1,0 +1,107 @@
+4. Data PARSER (PHP)
+
+Testing: coding style, input/output validation, memory management, OOP PHP
+
+Time allocation: 70 mins
+
+Requires: parser_test.zip (attached)
+
+---
+
+We have received a batch of data from a third party service which is
+
+not in a format we can easily import.
+
+As the third party service is in a different time zone, it will be
+
+quicker to parse the badly formatted files ourselves.
+
+Write a PHP script that can be executed from the command line.
+
+The script should be able to parse any number of files within a number
+
+of directories. So, the script will process all directories within a
+
+given directory, and all files in each of those directories.
+
+The script should be able to reformat the files into CSV files with
+
+the following columns/headers:
+
+id
+
+appCode
+
+deviceId
+
+contactable
+
+subscription_status
+
+has_downloaded_free_product_status
+
+has_downloaded_iap_product_status
+
+* Rules for each column *
+
+id = autoincremented integer
+
+appCode = string => The current app code should be mapped to an app
+
+code found within the appCodes.ini file
+
+deviceId = string (deviceToken in third party files)
+
+contactable = boolean => 0 or 1 (sometimes referred to as
+
+'deviceTokenStatus' in the third-party files).
+
+The third party service has also sent us a large number of tags that
+
+we need to consolidate into certain 'tag' groups =>
+
+subscription_status, has_downloaded_free_product_status,
+
+has_downloaded_iap_product_status.
+
+The tags they have sent through are in the following format =>
+
+tag1|tag2|tag3 (i.e. any number of strings separated by a pipe '|'
+
+character).
+
+The following tags are valid for each group (see columns above)
+
+- subscription_status
+
+active_subscriber
+
+expired_subscriber
+
+never_subscribed
+
+subscription_unknown
+
+- has_downloaded_free_product_status
+
+has_downloaded_free_product
+
+not_downloaded_free_product
+
+downloaded_free_product_unknown
+
+- has_downloaded_iap_product_status
+
+has_downloaded_iap_product
+
+not_downloaded_free_product
+
+downloaded_iap_product_unknown
+
+Any tag that does not fall into one into one of these options must be
+
+filtered out and dealt with. How you deal with them is up to you but
+
+ideally we should not lose the record. There should only be one tag
+
+per group!
