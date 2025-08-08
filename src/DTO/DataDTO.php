@@ -1,9 +1,10 @@
 <?php
 
-include_once('./enums/SubscriptionStatus.php');
-include_once('./enums/FreeProductStatus.php');
-include_once('./enums/IapProductStatus.php');
-include_once('./dto/DTOInterface.php');
+namespace App\DTO;
+
+use App\Enum\SubscriptionStatus;
+use App\Enum\FreeProductStatus;
+use App\Enum\IapProductStatus;
 
 class DataDTO implements DTOInterface {
 

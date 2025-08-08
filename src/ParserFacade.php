@@ -1,8 +1,10 @@
 <?php
 
-include_once('./dto/DataDTO.php');
-include_once('./parsers/LogParser.php');
-include_once('./writers/CSVWriter.php');
+namespace App;
+
+use App\Parser\LogParser;
+use App\DTO\DataDTO;
+use App\Writer\CSVWriter;
 
 class ParserFacade {
 

@@ -1,7 +1,6 @@
 <?php
 
-include_once('./dto/DataDTO.php');
-include_once('./parsers/ParserInterface.php');
+namespace App\Parser;
 
 class LogParser implements ParserInterface {
 

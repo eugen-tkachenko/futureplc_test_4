@@ -1,7 +1,6 @@
 <?php
 
-include_once('./dto/DataDTO.php');
-include_once('./writers/WriterInterface.php');
+namespace App\Writer;
 
 class CSVWriter implements WriterInterface {
 

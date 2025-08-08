@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Enum;
+
 trait StatusEnumTrait
 {
     public static function values(): array

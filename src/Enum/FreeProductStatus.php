@@ -1,6 +1,8 @@
 <?php
 
-include_once('./enums/StatusEnumTrait.php');
+namespace App\Enum;
+
+use App\Enum\StatusEnumTrait;
 
 enum FreeProductStatus: string
 {
