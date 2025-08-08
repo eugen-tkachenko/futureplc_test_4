@@ -5,6 +5,7 @@ namespace App;
 use App\Parser\LogParser;
 use App\DTO\DataDTO;
 use App\Writer\CSVWriter;
+use Exception;
 
 class ParserFacade {
 
