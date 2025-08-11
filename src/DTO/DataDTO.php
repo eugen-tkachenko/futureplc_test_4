@@ -13,6 +13,13 @@ class DataDTO implements DTOInterface {
     static $appCodes = [];
 
     /**
+     * @param array $appCodes
+     */
+    public static function setAppCodes($appCodes): void {
+        self::$appCodes = $appCodes;
+    }
+
+    /**
      * @param string $key
      * 
      * @return string|null

@@ -5,6 +5,11 @@ namespace App\DTO;
 interface DTOInterface {
 
     /**
+     * @param array $appCodes
+     */
+    public static function setAppCodes($appCodes): void;
+
+    /**
      * @param string $key
      * 
      * @return string|null
