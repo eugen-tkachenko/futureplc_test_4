@@ -2,9 +2,9 @@
 
 namespace App;
 
-use App\Parser\LogParser;
-use App\DTO\DataDTO;
-use App\Writer\CSVWriter;
+use App\Parser\ParserInterface;
+use App\DTO\DTOInterface;
+use App\Writer\WriterInterface;
 use Exception;
 
 class ParserFacade {
@@ -14,9 +14,9 @@ class ParserFacade {
      * All parameters MUST realise interfaces
      */
     public function __construct(
-        private LogParser $parser, 
-        private DataDTO $dataDTO,
-        private CSVWriter $writer,
+        private ParserInterface $parser, 
+        private DTOInterface    $dataDTO,
+        private WriterInterface $writer,
     ){}
 
     /**
@@ -33,7 +33,7 @@ class ParserFacade {
         // we use the DTO class as a storage for now
         $DTOClass = get_class($this->dataDTO);
 
-        $DTOClass::$appCodes = $this->parser->parseAppCodes($path);
+        $DTOClass::setAppCodes($this->parser->parseAppCodes($path));
 
         $files = $this->parser->findAllFiles($path, $fileExtension);
 
