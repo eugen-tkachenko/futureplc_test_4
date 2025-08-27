@@ -1,4 +1,6 @@
-parser_test/
+parser_test/*
+
+!parser_test/.gitkeep
 
 /parser_test.zip
 
