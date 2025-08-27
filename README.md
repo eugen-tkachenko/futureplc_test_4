@@ -18,7 +18,7 @@ This allows to separate parsing, validation and reading between ```LogParser```,
 
 In turn, those three classes implement ```Parser```, ```DTO``` and ```Writer``` interfaces, correspondingly.
 
-Such architecture allows one to simply extend the module to read from any other source (**DB, RSS-feed, REST (JSON) and SOAP (XML) API, WebSockets, files of various formats, etc.**), write into any other destination, and change the way the data is processed in between with a DTO.
+Such architecture allows one to simply extend the module to read from any other source (**DB, RSS-feed, REST (JSON) and SOAP (XML) API, WebSockets, files of various formats, etc.**), write into any other destination, and change the way data is processed in between with a DTO.
 
 
 For simplicity, the ```.csv``` files are created in the same folders the ```.log``` files are located.
