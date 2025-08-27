@@ -1,6 +1,8 @@
-parser_test/*
+parser_test/.DS_Store
+parser_test/*.csv
+parser_test/**/*.csv
 
-!parser_test/.gitkeep
+# !parser_test/.gitkeep
 
 /parser_test.zip
 
