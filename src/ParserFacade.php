@@ -68,6 +68,8 @@ class ParserFacade {
                 $this->writer->write($newfile, $data);
             }
 
+            echo "File '{$filename}' has been converted into '{$newFilename}'\n";
+
         } catch (Exception $e) {
             echo 'Error while writing to the file: ""' . $e->getMessage() . "\n";
         } finally {
